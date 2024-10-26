@@ -9,13 +9,10 @@ import Input from "./Input";
 import Button from "./Button";
 import toast from "react-hot-toast";
 import { useUser } from "@/hooks/useUser";
-import {
-  SupabaseClient,
-  useSupabaseClient,
-} from "@supabase/auth-helpers-react";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/navigation";
 
-const uploadModal = () => {
+const UploadModal = () => {
   const [isLoading, setIsLoading] = useState(false);
   const uploadModal = useUploadModal();
   const { user } = useUser();
@@ -151,4 +148,4 @@ const uploadModal = () => {
   );
 };
 
-export default uploadModal;
+export default UploadModal;
