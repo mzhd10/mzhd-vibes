@@ -147,7 +147,6 @@ const UploadModal = () => {
           {isLoading ? "Uploading..." : "Create"}
         </Button>
       </form>
-      <DiVim />
     </Modal>
   );
 };
