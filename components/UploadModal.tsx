@@ -56,7 +56,7 @@ const UploadModal = () => {
         });
 
       if (songError) {
-        console.error("song upload failed");
+        console.error("song upload failed", songError);
         setIsLoading(false);
         return toast.error("failed song upload");
       }
@@ -96,6 +96,7 @@ const UploadModal = () => {
       reset();
       uploadModal.onClose();
     } catch (error) {
+      console.error("An error occurred:", error);
       toast.error("Something went wrong");
     } finally {
       setIsLoading(false);
@@ -142,7 +143,7 @@ const UploadModal = () => {
           />
         </div>
         <Button disabled={isLoading} type="submit">
-          Create
+          {isLoading ? "Uploading..." : "Create"}
         </Button>
       </form>
     </Modal>
