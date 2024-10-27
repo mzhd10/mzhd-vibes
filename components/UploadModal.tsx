@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 import { useUser } from "@/hooks/useUser";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/navigation";
+import { DiVim } from "react-icons/di";
 
 const UploadModal = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -146,6 +147,7 @@ const UploadModal = () => {
           {isLoading ? "Uploading..." : "Create"}
         </Button>
       </form>
+      <DiVim />
     </Modal>
   );
 };
